@@ -1,7 +1,7 @@
 function stringCalc(numbers) {
 
     let input = String(numbers);
-    let stringSplit = input.split(/[\n,]+/);
+    let stringSplit = input.split(/[\n,;_-]+/);
     
     
     if(stringSplit.length >= 1){

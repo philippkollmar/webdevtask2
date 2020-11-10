@@ -35,8 +35,24 @@ describe('stringCalc', () => {
         
         expect(stringCalc("1\n2,3")).toBe(6);
     })
-    it('should ignore newline', () => {
+
+    it('should ignore newline + ,', () => {
         
         expect(stringCalc("1,\n,2,3")).toBe(6);
+    })
+
+    it('should ignore ;', () => {
+        
+        expect(stringCalc("1;2,3")).toBe(6);
+    })
+
+    it('should ignore -', () => {
+        
+        expect(stringCalc("1-2,3")).toBe(6);
+    })
+
+    it('should ignore _', () => {
+        
+        expect(stringCalc("1_2,3")).toBe(6);
     })
 })
