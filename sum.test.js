@@ -30,4 +30,13 @@ describe('stringCalc', () => {
         
         expect(stringCalc("15,60,87")).toBe(162);
     })
+
+    it('should ignore newline', () => {
+        
+        expect(stringCalc("1\n2,3")).toBe(6);
+    })
+    it('should ignore newline', () => {
+        
+        expect(stringCalc("1,\n,2,3")).toBe(6);
+    })
 })

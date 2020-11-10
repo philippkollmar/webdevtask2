@@ -1,10 +1,10 @@
 function stringCalc(numbers) {
 
     let input = String(numbers);
-    let stringSplit = input.split(',');
+    let stringSplit = input.split(/[\n,]+/);
     
     
-    if(stringSplit.length > 1){
+    if(stringSplit.length >= 1){
         let addition = 0;
         for(let i = 0; i < stringSplit.length; i++){
             addition = addition + parseInt(stringSplit[i]);
