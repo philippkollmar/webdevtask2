@@ -3,10 +3,12 @@ function stringCalc(numbers) {
     let input = String(numbers);
     let stringSplit = input.split(',');
     
+    
     if(stringSplit.length > 1){
-
-        let addition = parseInt(stringSplit[0]) + parseInt(stringSplit[1]);
-        console.log(addition);
+        let addition = 0;
+        for(let i = 0; i < stringSplit.length; i++){
+            addition = addition + parseInt(stringSplit[i]);
+        }
         return addition;
     }
     else {

@@ -21,4 +21,13 @@ describe('stringCalc', () => {
         expect(stringCalc("1")).toBe(1);
     })
 
+    it('should add 1, 2 and 3 = 6', () => {
+        
+        expect(stringCalc("1,2,3")).toBe(6);
+    })
+
+    it('should add 15, 60 and 87 = 162', () => {
+        
+        expect(stringCalc("15,60,87")).toBe(162);
+    })
 })
