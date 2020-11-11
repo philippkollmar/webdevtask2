@@ -60,4 +60,19 @@ describe('stringCalc', () => {
         
         expect(stringCalc("-5,2")).toBe(NaN);
     })
+
+    it('should ignore thousands(first number)', () => {
+        
+        expect(stringCalc("1000,1")).toBe(1);
+    })
+
+    it('should ignore thousands (third number)', () => {
+        
+        expect(stringCalc("1,2,3000")).toBe(3);
+    })
+
+    it('should ignore thousands (n number)', () => {
+        
+        expect(stringCalc("1,2,3,4,5,3583")).toBe(15);
+    })
 })
