@@ -8,7 +8,7 @@ describe('stringCalc', () => {
 
     it('should return NaN', () => {
         
-        expect(stringCalc("")).toBe(NaN);
+        expect(stringCalc(" ")).toBe(NaN);
     })
 
     it('should return 20', () => {
@@ -54,5 +54,10 @@ describe('stringCalc', () => {
     it('should ignore _', () => {
         
         expect(stringCalc("1_2,3")).toBe(6);
+    })
+
+    it('should generate exception', () => {
+        
+        expect(stringCalc("-5,2")).toBe(NaN);
     })
 })
