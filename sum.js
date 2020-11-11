@@ -6,8 +6,14 @@ function stringCalc(numbers) {
     
     if(stringSplit.length >= 1){
         let addition = 0;
+
+
         for(let i = 0; i < stringSplit.length; i++){
             addition = addition + parseInt(stringSplit[i]);
+            if(stringSplit[i] < 0){
+                alert('negatives not allowed');
+                return NaN;
+            }
         }
         return addition;
     }
