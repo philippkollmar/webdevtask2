@@ -46,11 +46,6 @@ describe('stringCalc', () => {
         expect(stringCalc("1;2,3")).toBe(6);
     })
 
-    it('should ignore -', () => {
-        
-        expect(stringCalc("1-2,3")).toBe(6);
-    })
-
     it('should ignore _', () => {
         
         expect(stringCalc("1_2,3")).toBe(6);
@@ -58,7 +53,7 @@ describe('stringCalc', () => {
 
     it('should generate exception', () => {
         
-        expect(stringCalc("-5,2")).toBe(NaN);
+        expect(stringCalc("-5,2")).toBe('negatives not allowed');
     })
 
     it('should ignore thousands(first number)', () => {
